@@ -46,32 +46,7 @@
 
 <body>
 
-  <div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
- </div>
+  <div class="background" id="background"></div>
   
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -189,6 +164,7 @@
 
 ***/ </script>
     </br>
+    
         <!-- 
             Footer:
             This includes a link to privacy.html page which can be setup for your Privacy Policy.
@@ -205,3 +181,18 @@
 </body>
 
 </html>
+
+<script src="/three.min.js"></script>
+<script src="/vanta.clouds.min.js"></script>
+<script>
+VANTA.CLOUDS({
+  el: "#background",
+  mouseControls: true,
+touchControls: false,
+gyroControls: true,
+minHeight: 400.00,
+minWidth: 300.00,
+skyColor: 0x25C9FF,
+speed: 0.30
+})
+</script>

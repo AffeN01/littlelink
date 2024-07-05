@@ -25,7 +25,7 @@
          Dark:   css/skeleton-dark.css
      -->
 
-    <link rel="stylesheet" href="css/skeleton-auto.css" />
+    <link rel="stylesheet" href="css/skeleton-dark.css" />
     <link rel="stylesheet" href="css/brands.css" />
 
     <!-- Favicon
@@ -35,14 +35,12 @@
   </head>
 
   <body>
+  <div id="background"></div>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container-left">
       <div class="row">
-        <div class="column" style="margin-top: 10%">
-          <p>
-            <a href="index.html">⬅️ Back to links</a>
-          </p>
+        <div class="column">
 
           <!--
             Privacy Policy:
@@ -90,6 +88,7 @@
               >Cloudflare Privacy Policy</a
             >
           </p>
+          
           <!-- End Section -->
 <script>/***
           <!-- Start Section -->
@@ -156,18 +155,38 @@
           </p>
           <!-- End Section -->
           <br />
+          <p>
+            <a href="index.html" style="text-decoration: none;"><b>⬅ Back to links</b></a>
+          </p>
           <br />
           
           <!-- 
             Footer:
             This includes a link to the LittleLink repository to make forking LittleLink easier.
             You can edit or remove anything here to make your own footer.
-           -->
+            -->
+
+            
         </div>
       </div>
     </div>
-
+  </div>
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </body>
 </html>
+
+<script src="/three.min.js"></script>
+<script src="/vanta.clouds.min.js"></script>
+<script>
+VANTA.CLOUDS({
+  el: "#background",
+  mouseControls: true,
+  touchControls: false,
+  gyroControls: true,
+  minHeight: 400.00,
+  minWidth: 300.00,
+  skyColor: 0x25C9FF,
+  speed: 0.30
+})
+</script>
