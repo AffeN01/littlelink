@@ -314,3 +314,65 @@ body, html {
   z-index: 1; /* Ensure the overlay is on top of the Vanta background */
   pointer-events: none; /* Allow interactions through the overlay */
 }
+
+/* Colorize-zoom Container */
+.img-hover-zoom--colorize img {
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Zoom-n-rotate Container */
+.img-hover-zoom--zoom-n-rotate img {
+  object-fit: cover;
+  transition: transform .5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  object-fit: cover;
+  transform: scale(1.25) rotate(5deg);
+}
+
+
+.wrap {
+  * {
+    transition: 0.2s;
+    height: 6em;
+    width: 18em;
+    border-radius: 8px;
+  }
+
+  overflow: hidden;
+
+  img {
+    position: relative;
+    object-fit: cover;
+    filter: grayscale();
+  }
+
+  .caption {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 14px 12px;
+    letter-spacing: 0.1px;
+  }
+
+  &:hover {
+    img {
+      object-fit: cover;
+      filter: grayscale(0);
+      filter: saturate(1);
+    }
+  }
+}
